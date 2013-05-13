@@ -1,0 +1,9 @@
+<% unless current_user.blank? %>
+	<p><img src=<%= current_user.image %> /></p>
+	<p><%= current_user.name %><p>
+	<p><%= current_user.location %><p>
+	<p><%= current_user.email %><p>
+
+<% end %>
+
+<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
