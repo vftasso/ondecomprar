@@ -12,7 +12,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: ondecomprar_development
+  database: ondecomprar
   pool: 5
   username: root
   password:
