@@ -1,8 +1,96 @@
-<% unless current_user.blank? %>
-	<p><img src=<%= current_user.image %> /></p>
-	<p><%= current_user.name %><p>
-	<p><%= current_user.location %><p>
-	<p><%= current_user.email %><p>
-<% else %>
-	<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+<% if false %>
+	<% unless current_user.blank? %>
+		<p><img src=<%= current_user.image %> /></p>
+		<p><%= current_user.name %><p>
+		<p><%= current_user.location %><p>
+		<p><%= current_user.email %><p>
+	<% else %>
+		<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+	<% end %>
 <% end %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+	div.header{
+		height: 120px;
+		border-bottom: 1px solid #ebebeb; 
+		position: relative;
+	}
+	div.bottom{
+		border-top: 1px solid #ebebeb; 
+		padding: 3px 0 10px; 
+		width: 100%;
+	}
+	.bottom ul{
+		list-style: none;
+		float:left;
+		width: 95%;
+	}
+	.bottom ul li{
+		display: inline;
+	}
+	
+	.bottom ul li:FIRST-CHILD {
+		padding-left: 60%
+	}
+	
+	div.body{
+		background-color: #f2f2f2;
+		min-height: 450px;
+	}
+	
+	.cepEntry{
+		display:block; 
+		margin:0 0 20px; 
+		padding:10px 10px 10px 35px; 
+		width:356px; border:0; 
+		border-radius:10px; 
+		background:#fff url(../../img/icon-lupa.png) no-repeat 5px 50%; 
+		font-size:21px; 
+		line-height:1.2em;
+		margin: 1px solid black;
+	}
+	.form-center {
+		margin:80px 0 0 220px
+	}
+	.form-center h2{
+		margin: 0 0 8px 10px
+	}
+	
+	img#loginFB2{
+		position: absolute;
+		right: 40px;
+		top:70px;
+	}
+}
+</style>
+</head>
+<body>
+	<div class="header" style="">
+		<h1>Header Loco</h1>
+		<img id="loginFB2" alt="facebook login" src="http://static.ifood.com.br/img/bt-login.png">
+	</div>
+	<div class="body">
+		<div id="main">
+			<br>
+			<div class="form-center">
+				<h2>onde comprar:</h2>
+				<input type="text" placeholder="luva de boxe" class="cepEntry" id="numeroCep" name="numeroCep">
+			</div>
+		</div>
+	</div>
+	<div class="bottom">
+		<ul>
+			<li>Link 1</li>
+			<li>Link 2</li>
+			<li>Link 3</li>
+			<li>Link 4</li>
+		</ul>
+	</div>
+
+</body>
+</html>
